@@ -1,0 +1,502 @@
+{
+  "paciente": {
+    "nome": "Sofia",
+    "especie": "Felina",
+    "sexo": "Fêmea",
+    "raca": "SRD",
+    "idade_documentada": "11 anos nos documentos recentes, com divergência de 12 anos no laudo de 13/05/2026",
+    "peso_documentado": "2,75 kg em 05/06/2026, aferido pelo tutor em balança nova. Tutor relata peso inicial aproximado de 3,8 kg na clínica; se confirmado, a perda estimada é de cerca de 27,6% do peso corporal. Confirmar peso inicial nos registros veterinários, pois houve divergência entre balanças."
+  },
+  "principais_eixos": [
+    "Processo hepatobiliar/inflamatório crônico, com GGT muito elevada, icterícia, bilirrubinas elevadas e hepatomegalia no ultrassom.",
+    "Anemia persistente, com piora de hemoglobina/hematócrito entre 13/05 e 19/05, e resposta medular descrita como leve/limítrofe.",
+    "Alterações gastrointestinais no ultrassom, com estômago e intestino espessados, compatíveis com gastroenterite/enteropatia inflamatória no contexto clínico.",
+    "Alterações urinárias/renais a esclarecer: cistite discreta no ultrassom, creatinina limítrofe e parecer de nefropatia bilateral, necessitando urinálise, SDMA, pressão e UPC para melhor leitura.",
+    "Investigação infecciosa em andamento: hemoparasitas não vistos em lâmina em fevereiro, mas isso não exclui infecção. FeLV por PCR proviral não detectado em 22/05. FIV não localizado nos arquivos enviados.",
+    "Peso atual confiável informado em 05/06/2026: 2,75 kg; usar como nova linha de base, sem comparar diretamente com 3,9 kg por erro relatado na balança antiga.",
+    "Atualização de 05/06/2026: vômitos repetidos após medicações de suporte e administração inicial de doxiciclina, com melhora parcial após ajuste de administração relatado pelo tutor, mas persistência de perda muscular e estado crítico.",
+    "Necessidade de discutir estabilização clínica, controle de vômitos por via alternativa, hidratação, eletrólitos e suporte nutricional, não apenas novos exames em sequência.",
+    "Aceitação alimentar atual limitada: Royal Canin para sensibilidade digestiva recusada; Golden Senior ingerida em pequenas porções. Quantificar ingestão real em kcal/dia."
+  ],
+  "exames": [
+    {
+      "data": "17/02/2026",
+      "tipo": "Hemograma",
+      "achados": [
+        [
+          "Eritrócitos",
+          "4,54 milhões/µL",
+          "5,0 a 10,0",
+          "Baixo",
+          "Menos glóbulos vermelhos que o esperado."
+        ],
+        [
+          "Hemoglobina",
+          "6,8 g/dL",
+          "8,0 a 15,0",
+          "Baixo",
+          "Capacidade de transporte de oxigênio reduzida."
+        ],
+        [
+          "Hematócrito",
+          "22%",
+          "24 a 45",
+          "Baixo",
+          "Confirma anemia."
+        ],
+        [
+          "VCM",
+          "49 µm³",
+          "39 a 55",
+          "Normal",
+          "Tamanho médio das hemácias preservado."
+        ],
+        [
+          "CHCM",
+          "30%",
+          "30 a 36",
+          "Limite inferior",
+          "Concentração de hemoglobina nas hemácias no limite."
+        ],
+        [
+          "RDW",
+          "25%",
+          "14 a 19",
+          "Alto",
+          "Variação no tamanho das hemácias, comum quando há anemia/regeneração."
+        ],
+        [
+          "Leucócitos totais",
+          "41.900/mm³",
+          "5.500 a 19.500",
+          "Muito alto",
+          "Leucocitose importante."
+        ],
+        [
+          "Segmentados/neutrófilos",
+          "37.710/mm³",
+          "2.500 a 12.500",
+          "Muito alto",
+          "Forte padrão inflamatório/infeccioso ou estresse intenso."
+        ],
+        [
+          "Monócitos",
+          "2.514/mm³",
+          "0 a 850",
+          "Alto",
+          "Pode acompanhar inflamação mais prolongada."
+        ],
+        [
+          "Linfócitos",
+          "838/mm³",
+          "1.500 a 7.000",
+          "Baixo",
+          "Pode aparecer em estresse inflamatório/corticoide endógeno."
+        ],
+        [
+          "Plaquetas",
+          "66.000/mm³",
+          "230.000 a 680.000",
+          "Baixo",
+          "Trombocitopenia importante, com ressalva de agregação plaquetária em gatos."
+        ],
+        [
+          "Hematozoários",
+          "Ausentes",
+          "Ausentes",
+          "Negativo em lâmina",
+          "Não exclui infecção por hemoparasitas, conforme observação do laboratório."
+        ]
+      ]
+    },
+    {
+      "data": "17/02/2026",
+      "tipo": "Bioquímica sérica",
+      "achados": [
+        [
+          "AST/TGO",
+          "121 U/L",
+          "0 a 43",
+          "Alto",
+          "Enzima menos específica, pode subir por fígado, músculo ou inflamação sistêmica."
+        ],
+        [
+          "Fosfatase alcalina/ALP",
+          "2,74 U/L",
+          "0 a 93",
+          "Normal",
+          "Não aponta colestase por este marcador naquele momento."
+        ],
+        [
+          "Creatinina",
+          "1,7 mg/dL",
+          "<1,6",
+          "Levemente alto",
+          "Sugere acompanhar rim/hidratação, principalmente se persistente."
+        ],
+        [
+          "Ureia",
+          "36 mg/dL",
+          "43 a 64",
+          "Baixo",
+          "Isoladamente tem pouco peso clínico, depende de dieta, fígado, hidratação e contexto."
+        ]
+      ]
+    },
+    {
+      "data": "13/05/2026",
+      "tipo": "Hemograma",
+      "achados": [
+        [
+          "Eritrócitos",
+          "4,4 milhões/µL",
+          "5,0 a 10,0",
+          "Baixo",
+          "Anemia persistente."
+        ],
+        [
+          "Hematócrito",
+          "22%",
+          "24 a 45",
+          "Baixo",
+          "Anemia ainda presente."
+        ],
+        [
+          "Hemoglobina",
+          "6,3 g/dL",
+          "8,0 a 15,0",
+          "Baixo",
+          "Pior que fevereiro."
+        ],
+        [
+          "VGM",
+          "50 µm³",
+          "39 a 55",
+          "Normal",
+          "Hemácias de tamanho médio preservado."
+        ],
+        [
+          "CHGM",
+          "29%",
+          "30 a 36",
+          "Levemente baixo",
+          "Leve hipocromia, ou seja, menor concentração de hemoglobina na célula."
+        ],
+        [
+          "Anisocitose",
+          "Acentuada",
+          "Não informado",
+          "Alterado",
+          "Grande variação de tamanho das hemácias."
+        ],
+        [
+          "Policromatófilos",
+          "3 a 4/campo",
+          "Não informado",
+          "Presente",
+          "Sinal indireto de resposta medular, células jovens no sangue."
+        ],
+        [
+          "Metarrubrícitos",
+          "784/100 leucócitos",
+          "Não informado",
+          "Presente",
+          "Precursores de hemácias na circulação, podem aparecer em regeneração ou estresse medular."
+        ],
+        [
+          "Plasma",
+          "Levemente ictérico",
+          "Ausente",
+          "Alterado",
+          "Amarelamento da amostra, sugere bilirrubina elevada."
+        ],
+        [
+          "Leucócitos totais",
+          "10.520/µL",
+          "5.500 a 19.500",
+          "Normal",
+          "Leucocitose de fevereiro não aparece neste exame."
+        ],
+        [
+          "Plaquetas estimadas",
+          "120.000/µL",
+          "230.000 a 680.000",
+          "Baixo",
+          "Melhor que fevereiro, mas ainda abaixo da referência."
+        ]
+      ]
+    },
+    {
+      "data": "13/05/2026",
+      "tipo": "Bioquímica",
+      "achados": [
+        [
+          "Ureia",
+          "80,5 mg/dL",
+          "42,8 a 64,2",
+          "Alto",
+          "Pode refletir desidratação, rim, maior catabolismo proteico ou outras causas."
+        ],
+        [
+          "Creatinina",
+          "1,6 mg/dL",
+          "0,8 a 1,8",
+          "Alto normal",
+          "Limite superior do laboratório. Pela régua IRIS, pede acompanhamento se persistente e estável."
+        ],
+        [
+          "ALT",
+          "6,8 U/L",
+          "6,0 a 83,0",
+          "Normal baixo",
+          "Não indica lesão hepatocelular ativa importante por este marcador, mas não descarta doença biliar/crônica."
+        ],
+        [
+          "GGT",
+          "173,9 U/L",
+          "0 a 10,0",
+          "Muito alto",
+          "Marcador muito forte de alteração hepatobiliar/colestática no contexto."
+        ],
+        [
+          "Soro",
+          "Moderadamente ictérico",
+          "Ausente",
+          "Alterado",
+          "Amostra amarelada reforça hiperbilirrubinemia/icterícia."
+        ]
+      ]
+    },
+    {
+      "data": "15/05/2026",
+      "tipo": "Ultrassom abdominal",
+      "achados": [
+        [
+          "Vesícula urinária",
+          "Parede 0,21 cm, discretamente espessada; discreta celularidade",
+          "Sem valor de referência no laudo",
+          "Alterado leve",
+          "Imagens sugestivas de cistite discreta."
+        ],
+        [
+          "Fígado",
+          "Dimensões aumentadas, superfície rugosa, ecotextura homogênea",
+          "Sem valor de referência no laudo",
+          "Alterado",
+          "Hepatomegalia e hepatopatia no parecer."
+        ],
+        [
+          "Vias biliares",
+          "Sem evidências de alteração intra ou extra-hepática",
+          "Sem alteração",
+          "Sem obstrução visível",
+          "Não afasta inflamação hepatobiliar microscópica/funcional."
+        ],
+        [
+          "Alças intestinais",
+          "Segmentos com parede espessada e conteúdo misto",
+          "Sem valor de referência no laudo",
+          "Alterado",
+          "Compatível com gastroenterite/enteropatia no contexto."
+        ],
+        [
+          "Estômago",
+          "Parede 0,34 cm, mucosa irregular, conteúdo gasoso",
+          "Sem valor de referência no laudo",
+          "Alterado",
+          "Pode acompanhar gastrite/gastroenterite."
+        ],
+        [
+          "Baço",
+          "Dimensões aumentadas, ecotextura homogênea",
+          "Sem valor de referência no laudo",
+          "Alterado",
+          "Esplenomegalia, pode acompanhar inflamação, anemia, resposta imunológica, entre outras causas."
+        ],
+        [
+          "Rins",
+          "Rim E 3,46 cm, rim D 3,66 cm, relação córtico-medular preservada",
+          "Sem valor de referência no laudo",
+          "Atenção",
+          "Parecer final cita nefropatia bilateral, embora a descrição preserve estrutura. Precisa correlacionar com urina, SDMA, creatinina e pressão."
+        ],
+        [
+          "Pâncreas",
+          "Sem alterações sonográficas dignas de nota",
+          "Sem alteração",
+          "Não alterado no US",
+          "Pancreatite crônica ainda pode não aparecer claramente no ultrassom, segundo a veterinária."
+        ],
+        [
+          "Adrenais",
+          "Dimensões preservadas",
+          "Sem alteração",
+          "Sem alteração",
+          "Sem achados relevantes no laudo."
+        ]
+      ]
+    },
+    {
+      "data": "19/05/2026",
+      "tipo": "Reticulócitos, AST e albumina",
+      "achados": [
+        [
+          "Hemácias",
+          "3,4 milhões/µL",
+          "5 a 10",
+          "Baixo",
+          "Anemia pior em relação a 13/05."
+        ],
+        [
+          "Hematócrito",
+          "20%",
+          "24 a 45",
+          "Baixo",
+          "Piora discreta da anemia."
+        ],
+        [
+          "Hemoglobina",
+          "5,9 g/dL",
+          "8 a 15",
+          "Baixo",
+          "Piora da capacidade de transporte de oxigênio."
+        ],
+        [
+          "Reticulócitos absolutos totais",
+          "105.400/µL",
+          "60.000 a 150.000 = leve",
+          "Resposta leve",
+          "Indica tentativa de resposta da medula, conforme régua do laboratório."
+        ],
+        [
+          "Reticulócitos agregados",
+          "44.200/µL",
+          "Corte externo: >50.000 em gatos sugere regeneração",
+          "Limítrofe",
+          "Em gatos, agregados refletem resposta mais recente. Está perto do corte, mas abaixo dele."
+        ],
+        [
+          "Reticulócitos corrigidos",
+          "1,68%",
+          "<1 arregen.; >1 regen.",
+          "Regenerativo pelo laudo",
+          "A veterinária interpretou como padrão regenerativo leve."
+        ],
+        [
+          "Plasma",
+          "Moderadamente ictérico",
+          "Ausente",
+          "Alterado",
+          "Icterícia persistente."
+        ],
+        [
+          "AST",
+          "20,9 U/L",
+          "26 a 43",
+          "Baixo",
+          "Não reforça lesão hepatocelular naquele momento."
+        ],
+        [
+          "Albumina",
+          "3,4 g/dL",
+          "2,1 a 3,3",
+          "Levemente alto",
+          "Pode variar com hidratação/concentração da amostra; não sugere perda proteica nesse resultado."
+        ]
+      ]
+    },
+    {
+      "data": "22/05/2026",
+      "tipo": "Bilirrubina e FeLV",
+      "achados": [
+        [
+          "Bilirrubina total",
+          "1,16 mg/dL",
+          "0,1 a 0,7",
+          "Alto",
+          "Confirma hiperbilirrubinemia."
+        ],
+        [
+          "Bilirrubina direta",
+          "0,53 mg/dL",
+          "0,1 a 0,3",
+          "Alto",
+          "Fração conjugada, reforça eixo hepatobiliar/colestático no contexto."
+        ],
+        [
+          "Bilirrubina indireta",
+          "0,63 mg/dL",
+          "0,0 a 0,5",
+          "Alto",
+          "Pode aparecer com destruição de hemácias ou processamento hepático insuficiente."
+        ],
+        [
+          "Soro",
+          "Ictérico +",
+          "Ausente",
+          "Alterado",
+          "A amostra manteve aspecto amarelado."
+        ],
+        [
+          "FeLV DNA proviral PCR",
+          "Não detectado",
+          "Não detectado",
+          "Negativo",
+          "Reduz muito a suspeita de FeLV proviral na amostra, mas o próprio laudo orienta correlacionar com clínica e outros testes se a suspeita persistir."
+        ]
+      ]
+    }
+  ],
+  "atualizacoes_do_tutor": [
+    {
+      "data": "05/06/2026",
+      "tipo": "peso",
+      "valor": "2,75 kg",
+      "observacao": "Peso aferido em balança nova. A balança anterior estava errada, portanto não comparar automaticamente com o registro de 3,9 kg como perda real."
+    }
+  ],
+  "atualizacoes": [
+    {
+      "data": "05/06/2026",
+      "tipo": "Revisão editorial e clínica",
+      "descricao": "Textos reescritos em linguagem institucional; inclusão de pontos de discussão veterinária e revisão de doses com base no peso confiável de 2,75 kg."
+    },
+    {
+      "data": "05/06/2026",
+      "tipo": "Alimentação",
+      "descricao": "Tutor informa compra de Golden Senior para gatos idosos e Royal Canin para gatos com sensibilidade digestiva. Royal Canin não aceita, possivelmente por tamanho/textura do grão; Golden Senior aceita em pequenas porções. Informação adicionada para cruzamento com perda de peso, vômitos e meta calórica."
+    }
+  ],
+  "pontos_para_discussao_veterinaria": [
+    "Revisar doses de medicamentos com base no peso confiável atual de 2,75 kg.",
+    "Priorizar reavaliação hepatobiliar diante de GGT muito elevada, bilirrubinas aumentadas, icterícia laboratorial e hepatomegalia.",
+    "Definir plano nutricional e meta calórica para reduzir risco de piora hepática associada à baixa ingestão.",
+    "Acompanhar anemia com hemograma seriado, reticulócitos agregados e investigação infecciosa/imunomediada conforme evolução.",
+    "Complementar eixo renal/urinário com urinálise, densidade urinária, UPC, SDMA, fósforo e pressão arterial, se indicado.",
+    "Definir alimento e forma de apresentação com melhor aceitação e segurança gastrointestinal, considerando recusa da Royal Canin Sensibilidade Digestiva e aceitação parcial da Golden Senior."
+  ],
+  "atualizacoes_tutor": [
+    {
+      "data": "05/06/2026",
+      "tema": "Vômitos, tolerância medicamentosa, perda de peso e perda muscular",
+      "relato": [
+        "Hemolipet + Hepvet causavam vômito em todas as administrações, com frequência estimada de 4 a 6 episódios por dia durante aproximadamente uma semana.",
+        "Vonau foi vomitado logo após a administração, tornando incerta a absorção da dose.",
+        "Doxiciclina administrada inicialmente com pequenas quantidades de Recovery Royal Canin antes/depois também foi associada a náusea e vômitos.",
+        "Após cerca de uma semana, tutor passou a dividir o comprimido e administrar com água ou água de sachê, relatando melhora parcial e redução dos vômitos para cerca de 1 episódio ao dia.",
+        "Sofia segue bebendo água e comendo pequenas porções, porém a ingestão percebida não evitou perda acentuada de massa muscular.",
+        "Peso confiável atual: 2,75 kg. Tutor relata ossos da coluna aparentes e estado crítico.",
+        "Alimentação atual: Royal Canin para gatos com sensibilidade digestiva não foi aceita; Golden Senior para gatos idosos é ingerida em pequenas porções."
+      ],
+      "leitura_integrada": "Combinação de vômitos persistentes, baixa tolerância oral, perda ponderal/muscular, anemia, alterações hepatobiliares e aceitação alimentar limitada justifica reavaliação presencial/segunda opinião sem demora, com discussão sobre estabilização, controle de náusea, hidratação, eletrólitos, plano nutricional com meta calórica e possíveis vias alternativas de suporte."
+    }
+  ],
+  "estimativa_nutricional": {
+    "peso_atual_kg": 2.75,
+    "RER_formula": "70 × peso corporal^0,75",
+    "RER_estimado_kcal_dia": 149.5,
+    "observacao": "Estimativa para discussão veterinária. Pacientes debilitados podem precisar de introdução gradual e supervisão para evitar piora de náusea ou complicações.",
+    "alimentacao_atual": "Royal Canin para sensibilidade digestiva recusada; Golden Senior para gatos idosos aceita em pequenas porções.",
+    "ponto_clinico": "A aceitação parcial deve ser convertida em kcal/dia, pois pequenas porções podem não atingir a necessidade energética mínima durante recuperação."
+  }
+}

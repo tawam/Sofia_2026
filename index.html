@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dossiê Clínico Sofia | 2025-2026</title>
+  <meta name="description" content="Dossiê clínico institucional da Sofia, com linha do tempo, exames, receitas e interpretação acessível para avaliação veterinária.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="version" content="SOFIA_DOSSIE_PROFISSIONAL_V4_ATUALIZACAO_CLINICA_2026-06-05">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream:#fbf6ec; --paper:#fffaf2; --beige:#eadcc8; --beige2:#d7c3a8;
+      --salmon:#d98773; --salmonDark:#b96c5b; --green:#6f8467; --greenDark:#35463d;
+      --ink:#27342f; --muted:#6f746d; --line:rgba(53,70,61,.16); --shadow:0 24px 70px rgba(49,50,43,.11);
+      --ok:#557b5d; --warn:#c0823d; --bad:#b65d55; --watch:#847251;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; background:linear-gradient(180deg,var(--cream),#f4eadc 70%,#efe0cd); color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif; line-height:1.65}
+    a{color:var(--greenDark); text-decoration:none}
+    a:hover{color:var(--salmonDark)}
+    .grain{position:fixed; inset:0; pointer-events:none; opacity:.17; background-image:radial-gradient(circle at 1px 1px, rgba(53,70,61,.15) 1px, transparent 0); background-size:22px 22px; mix-blend-mode:multiply; z-index:-1}
+    .wrap{width:min(1180px,calc(100% - 44px)); margin-inline:auto}
+    .hero{position:relative; overflow:hidden; padding:38px 0 68px; border-bottom:1px solid var(--line)}
+    .hero:before{content:""; position:absolute; right:-9vw; top:-14vw; width:44vw; height:44vw; border-radius:50%; background:radial-gradient(circle,var(--salmon) 0 26%,transparent 27% 100%); opacity:.14}
+    .hero:after{content:"S"; position:absolute; right:6vw; bottom:-160px; font-family:Cormorant Garamond,serif; font-size:420px; color:rgba(111,132,103,.08); line-height:1}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:18px; position:relative; z-index:2}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.02em}
+    .mark{width:42px; height:42px; border-radius:18px; background:linear-gradient(135deg,var(--green),var(--salmon)); display:grid; place-items:center; color:#fff; box-shadow:var(--shadow)}
+    .links{display:flex; gap:14px; flex-wrap:wrap; font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:.08em}
+    .links a{padding:8px 10px; border-radius:999px}
+    .links a:hover{background:rgba(111,132,103,.10)}
+    .hero-grid{display:grid; grid-template-columns:1.25fr .75fr; gap:36px; align-items:end; padding-top:70px; position:relative; z-index:1}
+    .eyebrow{display:inline-flex; align-items:center; gap:10px; color:var(--greenDark); font-weight:800; letter-spacing:.13em; text-transform:uppercase; font-size:12px; margin-bottom:18px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--salmon)}
+    h1,h2,h3{line-height:1.08; margin:0; color:var(--ink)}
+    h1{font-family:Cormorant Garamond,serif; font-size:clamp(54px,9vw,118px); letter-spacing:-.05em; max-width:880px}
+    h1 span{color:var(--salmonDark)}
+    .lead{font-size:clamp(18px,2vw,23px); max-width:790px; color:#44524a; margin:22px 0 0}
+    .hero-card{background:rgba(255,250,242,.86); border:1px solid var(--line); border-radius:34px; padding:28px; box-shadow:var(--shadow); backdrop-filter:blur(8px)}
+    .hero-card h2{font-family:Cormorant Garamond,serif; font-size:34px; margin-bottom:18px}
+    .mini{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .mini div{background:#fff7ee; border:1px solid var(--line); padding:14px; border-radius:18px}
+    .mini span{display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:800}
+    .mini strong{font-size:18px}
+    .notice{margin-top:18px; padding:14px 16px; border-radius:18px; background:rgba(217,135,115,.12); border:1px solid rgba(217,135,115,.22); font-size:14px; color:#57413b}
+    section{padding:76px 0; border-bottom:1px solid var(--line)}
+    .section-head{display:grid; grid-template-columns:.38fr 1fr; gap:34px; align-items:start; margin-bottom:30px}
+    .kicker{font-size:12px; text-transform:uppercase; letter-spacing:.16em; color:var(--salmonDark); font-weight:900}
+    h2{font-family:Cormorant Garamond,serif; font-size:clamp(38px,5vw,68px); letter-spacing:-.035em}
+    .section-head p{margin:12px 0 0; color:var(--muted); max-width:760px}
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .panel{background:rgba(255,250,242,.9); border:1px solid var(--line); border-radius:28px; padding:24px; box-shadow:0 12px 34px rgba(53,70,61,.06)}
+    .panel h3{font-size:20px; margin-bottom:8px}
+    .panel p,.panel li{color:#5f665f; margin:0}
+    .panel ul{padding-left:18px; margin:12px 0 0}
+    .severity{display:inline-flex; align-items:center; gap:7px; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.06em; margin-bottom:14px}
+    .sev-high{background:rgba(182,93,85,.12); color:var(--bad)} .sev-med{background:rgba(192,130,61,.12); color:var(--warn)} .sev-watch{background:rgba(111,132,103,.13); color:var(--greenDark)}
+    .timeline{position:relative; margin-top:16px}
+    .timeline:before{content:""; position:absolute; left:132px; top:0; bottom:0; width:1px; background:var(--line)}
+    .time-item{display:grid; grid-template-columns:132px 1fr; gap:28px; padding:20px 0; position:relative}
+    .time-item:after{content:""; position:absolute; left:126px; top:29px; width:13px; height:13px; background:var(--salmon); border:4px solid var(--cream); border-radius:50%; box-shadow:0 0 0 1px var(--line)}
+    .time-item time{font-weight:900; color:var(--greenDark); font-size:14px}
+    .time-item div{background:rgba(255,250,242,.72); border:1px solid var(--line); border-radius:24px; padding:20px 22px}
+    .time-item h3{font-size:21px; margin-bottom:6px}
+    .time-item p{margin:0; color:#5f665f}
+    .diagnosis-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .callout{background:linear-gradient(135deg,rgba(111,132,103,.12),rgba(217,135,115,.12)); border:1px solid var(--line); border-radius:30px; padding:26px}
+    .callout h3{font-family:Cormorant Garamond,serif; font-size:32px; margin-bottom:10px}
+    .exam-card{background:rgba(255,250,242,.9); border:1px solid var(--line); border-radius:30px; margin:22px 0; overflow:hidden; box-shadow:0 12px 34px rgba(53,70,61,.05)}
+    .exam-head{display:flex; justify-content:space-between; gap:18px; align-items:center; padding:22px 24px; background:linear-gradient(90deg,rgba(111,132,103,.12),rgba(217,135,115,.08))}
+    .exam-head span{font-weight:900; color:var(--salmonDark)} .exam-head h3{font-size:22px; text-align:right}
+    .table-wrap{overflow:auto}
+    table{width:100%; border-collapse:collapse; min-width:880px; background:#fffaf2}
+    th,td{text-align:left; vertical-align:top; padding:14px 16px; border-bottom:1px solid rgba(53,70,61,.10); font-size:14px}
+    th{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:#667069; background:#f4eadc; white-space:nowrap}
+    td:nth-child(2),td:nth-child(3){white-space:nowrap}
+    .badge{display:inline-flex; align-items:center; white-space:nowrap; border-radius:999px; padding:5px 9px; font-size:12px; font-weight:900}
+    .badge.ok{background:rgba(85,123,93,.13); color:var(--ok)} .badge.warn{background:rgba(192,130,61,.14); color:var(--warn)} .badge.bad{background:rgba(182,93,85,.13); color:var(--bad)} .badge.watch{background:rgba(132,114,81,.13); color:var(--watch)}
+    .trends{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .trend{background:rgba(255,250,242,.84); border:1px solid var(--line); border-radius:24px; padding:18px}
+    .trend h3{font-size:17px; margin-bottom:8px}
+    .trend p{font-size:12px; color:var(--muted); margin:8px 0 0}
+    .spark{width:100%; height:auto; overflow:visible}
+    .spark path{fill:none; stroke:var(--salmonDark); stroke-width:4; stroke-linecap:round; stroke-linejoin:round}
+    .spark circle{fill:var(--greenDark)} .spark text{font-size:11px; fill:#6f746d; font-weight:700}
+    .therapy-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+    .med{display:grid; gap:8px; background:rgba(255,250,242,.9); border:1px solid var(--line); border-radius:26px; padding:22px}
+    .med small{font-weight:900; color:var(--salmonDark); text-transform:uppercase; letter-spacing:.08em}
+    .med h3{font-size:23px}
+    .med p{margin:0; color:#5f665f}
+    details{background:rgba(255,250,242,.86); border:1px solid var(--line); border-radius:18px; padding:0; overflow:hidden}
+    details+details{margin-top:10px}
+    summary{cursor:pointer; padding:16px 18px; font-weight:900; color:var(--greenDark)}
+    details p{padding:0 18px 18px; margin:0; color:#5f665f}
+    .source-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+    .source-card{display:block; background:rgba(255,250,242,.9); border:1px solid var(--line); border-radius:24px; padding:12px; box-shadow:0 12px 34px rgba(53,70,61,.05)}
+    .source-card img{width:100%; height:210px; object-fit:cover; border-radius:16px; background:#eee1d0; object-position:top}
+    .source-card span{display:block; margin:12px 4px 2px; font-weight:900; color:var(--ink); line-height:1.2}
+    .source-card em{display:block; margin:0 4px 4px; color:var(--salmonDark); font-style:normal; font-size:12px; font-weight:900; text-transform:uppercase; letter-spacing:.08em}
+    .questions{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .questions ol{margin:0; padding-left:22px}
+    .questions li{margin:0 0 10px; color:#5f665f}
+    .refs{font-size:14px; color:#5f665f}
+    .refs li{margin-bottom:8px}
+    footer{padding:40px 0 70px; color:#6f746d; font-size:13px}
+    .printbar{position:fixed; right:18px; bottom:18px; z-index:10; display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    .btn{border:0; background:var(--greenDark); color:#fff; padding:12px 16px; border-radius:999px; font-weight:900; box-shadow:var(--shadow); cursor:pointer}
+    .btn.alt{background:var(--salmonDark)}
+    @media(max-width:980px){.hero-grid,.section-head,.diagnosis-grid,.therapy-grid,.questions{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr 1fr} .source-grid,.trends{grid-template-columns:1fr 1fr} .links{display:none} .timeline:before{left:14px} .time-item{grid-template-columns:1fr; padding-left:38px; gap:8px} .time-item:after{left:8px} .time-item time{font-size:13px}}
+    @media(max-width:620px){.wrap{width:min(100% - 26px,1180px)} .hero{padding-top:24px} .hero-grid{padding-top:42px} .grid-3,.source-grid,.trends{grid-template-columns:1fr} .mini{grid-template-columns:1fr} section{padding:54px 0} .source-card img{height:260px} .printbar{position:static; padding:0 13px 20px}}
+    @media print{body{background:#fff} .nav,.printbar,.source-grid{display:none} section{page-break-inside:avoid; padding:30px 0} .hero{padding:20px 0} .exam-card{box-shadow:none} table{min-width:0; font-size:11px} th,td{padding:8px} a{color:#000}}
+  </style>
+</head>
+<body>
+<div class="grain"></div>
+<header class="hero" id="topo">
+  <div class="wrap">
+    <nav class="nav">
+      <div class="brand"><div class="mark">🐾</div><span>Dossiê Clínico Sofia</span></div>
+      <div class="links"><a href="#resumo">Resumo</a><a href="#estado">Estado atual</a><a href="#linha">Linha do tempo</a><a href="#exames">Exames</a><a href="#condutas">Condutas</a><a href="#glossario">Glossário</a><a href="#discussao">Discussão veterinária</a><a href="#fontes">Fontes</a></div>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow"><span class="dot"></span>Prontuário visual organizado</div>
+        <h1>Sofia, <span>leitura clínica</span> documentada.</h1>
+        <p class="lead">Dossiê clínico-informativo elaborado para organizar exames laboratoriais, ultrassonografia, prescrições e comunicações veterinárias de 2026. O objetivo é facilitar a leitura do caso, preservar os dados originais e apoiar a continuidade da avaliação por profissionais veterinários.</p>
+      </div>
+      <aside class="hero-card">
+        <h2>Ficha rápida</h2>
+        <div class="mini">
+          <div><span>Paciente</span><strong>Sofia</strong></div>
+          <div><span>Espécie</span><strong>Felina SRD</strong></div>
+          <div><span>Idade</span><strong>11 anos*</strong></div>
+          <div><span>Peso recente confiável</span><strong>2,75 kg</strong></div>
+        </div>
+        <p class="notice">*Há divergência: um exame de 13/05 registra 12 anos, mas os demais documentos recentes indicam 11 anos. Atualização do tutor em 05/06/2026: peso aferido em balança nova, 2,75 kg. O tutor também relata peso inicial aproximado na clínica em torno de 3,8 kg, com perda acentuada durante o período de vômitos. Como houve divergências de balança, o valor de 2,75 kg deve ser usado como linha de base confiável atual, e o peso inicial deve ser confirmado nos registros da clínica.</p>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="resumo">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Resumo executivo</span></div><div><h2>Síntese clínica: principais eixos de atenção</h2><p>Esta síntese não estabelece diagnóstico. Ela organiza os achados documentados e destaca os pontos que merecem correlação com exame físico, evolução clínica, resposta terapêutica e exames complementares.</p></div></div>
+    <div class="grid-3">
+      <article class="panel"><span class="severity sev-high">Prioridade alta</span><h3>Eixo hepatobiliar</h3><p>GGT muito elevada, bilirrubinas aumentadas, soro/plasma ictérico e ultrassonografia com hepatomegalia. Esse conjunto forma o eixo de maior consistência documental no caso.</p></article>
+      <article class="panel"><span class="severity sev-high">Prioridade alta</span><h3>Anemia persistente</h3><p>Hemoglobina e hematócrito baixos desde fevereiro, com piora em maio. Há indícios de resposta medular, porém de intensidade discreta ou limítrofe.</p></article>
+      <article class="panel"><span class="severity sev-med">Investigar</span><h3>Intestino, rim e urina</h3><p>A ultrassonografia descreve alterações gástricas/intestinais, cistite discreta e parecer renal que requer correlação com urinálise, SDMA, pressão arterial e relação proteína/creatinina urinária.</p></article>
+      <article class="panel"><span class="severity sev-high">Monitorar de perto</span><h3>Peso atualizado: 2,75 kg</h3><p>Peso informado pelo tutor em 05/06/2026, aferido em balança nova. O tutor relata peso inicial aproximado de 3,8 kg na clínica; se esse dado for confirmado, a perda estimada é de cerca de 27,6% do peso corporal. Como houve divergência entre balanças, a documentação deve registrar o peso atual como confiável e solicitar confirmação do peso inicial nos registros clínicos.</p></article>
+      <article class="panel"><span class="severity sev-high">Prioridade imediata</span><h3>Vômitos, perda de massa e baixa reserva</h3><p>O tutor relata vômitos repetidos após Hemolipet/Hepvet, vômito imediato após Vonau e vômitos associados à administração inicial da doxiciclina com Recovery. Houve melhora parcial após mudança de forma de administração, mas a Sofia permanece com perda muscular importante e estado geral crítico.</p></article>
+      <article class="panel"><span class="severity sev-med">Acompanhar diariamente</span><h3>Aceitação alimentar atual</h3><p>Atualização do tutor: a Sofia não aceitou bem a Royal Canin para sensibilidade digestiva, possivelmente por tamanho ou textura do grão. A ração Golden Senior para gatos idosos é aceita em pequenas porções. Este dado deve ser interpretado junto à meta calórica diária, pois aceitar pequenas quantidades não garante ingestão suficiente para recuperar peso e massa muscular.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="estado">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Atualização clínica do tutor</span></div><div><h2>Estado atual e tolerância ao tratamento</h2><p>Informações relatadas pelo tutor em 05/06/2026, inseridas como dados clínicos de evolução. A finalidade é documentar a resposta observada em casa, destacar riscos e facilitar a análise por outro profissional veterinário.</p></div></div>
+    <div class="diagnosis-grid">
+      <article class="callout"><h3>1. Vômitos associados a medicações de suporte</h3><p>O tutor relata que Hemolipet associado a Hepvet, prescritos como suporte para anemia/vitaminas e fígado, provocavam vômito em todas as administrações. A frequência descrita no período foi de aproximadamente 4 a 6 episódios de vômito por dia. Esse padrão deve ser registrado como intolerância importante ou reação adversa suspeita, sem concluir isoladamente que os produtos foram a causa única, pois havia doença de base concomitante.</p></article>
+      <article class="callout"><h3>2. Vonau sem absorção confiável</h3><p>O tutor informa que a Sofia vomitou logo após a administração do Vonau. Isso impede concluir que o antiemético foi ineficaz, porque pode não ter havido tempo suficiente para absorção adequada. Para segunda opinião, o ponto central é discutir controle de náusea por via mais tolerável, inclusive opção injetável ou manejo hospitalar, caso o exame físico indique necessidade.</p></article>
+      <article class="callout"><h3>3. Doxiciclina e forma de administração</h3><p>Na fase inicial, quando a doxiciclina era administrada com pequenas quantidades de Recovery Royal Canin antes e depois, mesmo diluídas em água, a Sofia apresentava náusea e vômitos. Após cerca de uma semana, o tutor passou a dividir o comprimido e administrar com água ou água de sachê, relatando melhor tolerância e redução dos vômitos para aproximadamente 1 episódio ao dia. Essa informação sugere que a forma de administração interferiu na tolerância, mas qualquer fracionamento ou ajuste precisa ser validado pelo veterinário.</p></article>
+      <article class="callout"><h3>4. Perda ponderal e muscular</h3><p>O peso confiável atual é 2,75 kg. O tutor relata peso inicial aproximado de 3,8 kg na clínica; se confirmado, isso representa perda estimada de cerca de 27,6% do peso corporal. Há relato de perda acentuada de massa muscular e ossos da coluna mais aparentes. Em uma gata idosa, anêmica, com alterações hepatobiliares e vômitos persistentes, esse conjunto aumenta a urgência de reavaliação presencial.</p></article>
+      <article class="callout"><h3>5. Alimentação atual e aceitação de rações</h3><p>O tutor informa que adquiriu Golden Senior para gatos idosos e Royal Canin para gatos com sensibilidade digestiva. A Royal Canin não está sendo aceita, provavelmente por tamanho, textura ou baixa palatabilidade individual no momento. A Golden Senior é ingerida em pequenas porções. Para a avaliação veterinária, a informação central não é apenas qual alimento foi oferecido, mas a quantidade efetivamente ingerida em kcal/dia e se essa ingestão é suficiente para interromper a perda de peso e massa muscular.</p></article>
+    </div>
+    <article class="panel" style="margin-top:18px"><h3>Leitura clínica integrada desta atualização</h3><p>O ponto crítico não é apenas a presença de vômito, mas a combinação entre vômitos repetidos por vários dias, perda de peso, perda muscular, anemia, alterações hepatobiliares, provável baixa ingestão calórica real, tolerância limitada às medicações por via oral e aceitação alimentar seletiva. Mesmo com pequena melhora após reduzir os vômitos para cerca de 1 vez ao dia, o quadro ainda deve ser tratado como instável até que hidratação, eletrólitos, dor, náusea, ingestão calórica e evolução hematológica/hepática sejam reavaliados.</p></article>
+    <article class="panel" style="margin-top:18px"><h3>Estimativa nutricional para discussão</h3><p>Com 2,75 kg, a necessidade energética de repouso estimada é de aproximadamente 149 kcal/dia pela fórmula 70 × peso corporal<sup>0,75</sup>. Em pacientes debilitados, metas devem ser definidas de forma conservadora e supervisionada, pois introdução rápida ou volume excessivo pode piorar náusea. Como a Sofia aceita a Golden Senior apenas em pequenas porções e não aceita a Royal Canin para sensibilidade digestiva, o objetivo prático para a segunda opinião é definir meta calórica diária, medir a ingestão real em kcal/dia e estabelecer em que ponto alimentação assistida ou internação passam a ser mais seguras do que tentativas repetidas em casa.</p></article>
+  </div>
+</section>
+
+<section id="linha">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Linha do tempo</span></div><div><h2>Evolução clínica em ordem cronológica</h2><p>Registro sequencial dos principais exames, prescrições, mensagens e atualizações relevantes, organizado para facilitar a análise da evolução clínica e a comunicação com profissionais veterinários.</p></div></div>
+    <div class="timeline"><div class="time-item"><time>17/02/2026</time><div><h3>Primeiro painel disponível</h3><p>Hemograma mostra anemia, leucocitose muito importante, neutrofilia, monocitose e plaquetas baixas. Bioquímica mostra AST alto e creatinina levemente acima da referência local.</p></div></div>
+<div class="time-item"><time>13/05/2026</time><div><h3>Novo painel laboratorial HemolaborVet</h3><p>Anemia permanece. Leucócitos normalizam, plaquetas melhoram mas seguem baixas. GGT surge muito elevada, ureia alta e soro moderadamente ictérico.</p></div></div>
+<div class="time-item"><time>14/05/2026</time><div><h3>Receita e ultrassom solicitado</h3><p>Foram prescritos suporte antiemético/suplementar/hepático e solicitado ultrassom abdominal. Posteriormente, foram registradas dúvidas do tutor sobre a interpretação do laudo.</p></div></div>
+<div class="time-item"><time>15/05/2026</time><div><h3>Ultrassom abdominal</h3><p>Laudo sugere cistite discreta, hepatopatia com hepatomegalia, nefropatia bilateral, gastroenterite e esplenomegalia. Pâncreas sem alteração ultrassonográfica relevante no exame.</p></div></div>
+<div class="time-item"><time>19/05/2026</time><div><h3>Reticulócitos, AST e albumina</h3><p>Anemia apresenta discreta piora nos parâmetros disponíveis. Reticulócitos indicam resposta leve/limítrofe da medula. AST não permanece alto e albumina está levemente acima.</p></div></div>
+<div class="time-item"><time>22/05/2026</time><div><h3>Bilirrubina e FeLV</h3><p>Bilirrubina total, direta e indireta elevadas. FeLV DNA proviral por PCR não detectado.</p></div></div>
+<div class="time-item"><time>23/05/2026</time><div><h3>Conduta com doxiciclina</h3><p>Mensagem veterinária registrava 3,9 kg e considerava ganho de peso positivo, porém essa medição foi posteriormente marcada como não confiável pelo tutor por erro da balança antiga. Doxiciclina 50 mg, 1 comprimido a cada 24 horas por 21 dias, sempre com alimento e água/sachê depois.</p></div></div>
+<div class="time-item"><time>14–22/05/2026</time><div><h3>Vômitos intensos durante suporte inicial</h3><p>Atualização do tutor: Hemolipet + Hepvet desencadeavam vômitos em todas as administrações, com frequência aproximada de 4 a 6 episódios por dia. Vonau foi vomitado logo após a administração, tornando incerta sua absorção e sua eficácia real naquele momento.</p></div></div>
+<div class="time-item"><time>Pós 23/05</time><div><h3>Doxiciclina, náusea e mudança de tolerância</h3><p>Quando a doxiciclina era administrada com pequenas quantidades de Recovery Royal Canin antes e depois, a Sofia também apresentava náusea e vômitos. Após cerca de uma semana, o tutor passou a dividir o comprimido e administrar com água ou água de sachê, relatando melhora parcial, com vômitos reduzidos para aproximadamente 1 episódio ao dia.</p></div></div>
+<div class="time-item"><time>05/06/2026</time><div><h3>Peso atualizado, estado corporal e alimentação</h3><p>Peso confiável mais recente informado pelo tutor: 2,75 kg, aferido em balança nova. O tutor relata peso inicial aproximado de 3,8 kg na clínica, perda importante de massa muscular e ossos da coluna mais aparentes. Como há divergência de balanças, o peso inicial deve ser confirmado nos registros veterinários; ainda assim, a condição corporal atual foi registrada como crítica. Atualização alimentar: Royal Canin para sensibilidade digestiva não foi aceita; Golden Senior para gatos idosos é aceita em pequenas porções.</p></div></div></div>
+  </div>
+</section>
+
+<section id="hipoteses">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Mapa clínico</span></div><div><h2>Interpretação integrada dos achados</h2><p>Esta seção integra os achados laboratoriais, ultrassonográficos e clínicos disponíveis. As hipóteses são apresentadas como possibilidades de investigação, não como conclusões diagnósticas.</p></div></div>
+    <div class="diagnosis-grid">
+      <article class="callout"><h3>1. Hepatobiliar/inflamatório crônico</h3><p>A veterinária descreve suspeita de processo hepatobiliar/inflamatório crônico associado a alterações gastrointestinais. A hipótese é compatível com GGT de 173,9 U/L, bilirrubinas elevadas, icterícia e aumento hepático na ultrassonografia. Possibilidades a discutir incluem colangite/colangiohepatite, doença inflamatória intestinal associada, tríade felina e doença crônica de base.</p></article>
+      <article class="callout"><h3>2. Anemia com resposta leve</h3><p>Hematócrito e hemoglobina permanecem baixos, com queda documentada em maio. O laudo descreve padrão regenerativo, porém a interpretação em felinos exige atenção ao número de reticulócitos agregados. A leitura mais prudente é de resposta medular presente, mas discreta ou limítrofe.</p></article>
+      <article class="callout"><h3>3. Infecção ainda não totalmente eliminada</h3><p>A ausência de hematozoários na lâmina de fevereiro não exclui hemoplasma; a própria observação laboratorial aponta essa limitação. A doxiciclina é compatível com investigação de hemoplasma ou processo infeccioso crônico. O PCR proviral para FeLV veio não detectado. Resultado de FIV não foi localizado nos arquivos enviados.</p></article>
+      <article class="callout"><h3>4. Rim e bexiga exigem correlação complementar</h3><p>A creatinina foi registrada em 1,7 mg/dL em fevereiro e 1,6 mg/dL em maio. Esses valores isolados não confirmam doença renal, especialmente porque hidratação e massa muscular influenciam a leitura. Como a ultrassonografia cita nefropatia bilateral e cistite discreta, a complementação indicada para discussão inclui urinálise, densidade urinária, UPC, SDMA e pressão arterial.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="tendencias">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Tendências</span></div><div><h2>Evolução longitudinal dos marcadores</h2><p>A interpretação seriada ajuda a diferenciar achados pontuais de tendências clínicas relevantes. Abaixo estão os marcadores com evolução documentada no período analisado.</p></div></div>
+    <div class="trends"><div class="trend"><h3>Hematócrito (%)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,18.0 L130.0,18.0 L242.0,74.0" /><circle cx="18.0" cy="18.0" r="4" /><circle cx="130.0" cy="18.0" r="4" /><circle cx="242.0" cy="74.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="130.0" y="89" text-anchor="middle">13/05</text><text x="242.0" y="89" text-anchor="middle">19/05</text></svg><p>22 → 22 → 20</p></div>
+<div class="trend"><h3>Hemoglobina (g/dL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,18.0 L130.0,49.1 L242.0,74.0" /><circle cx="18.0" cy="18.0" r="4" /><circle cx="130.0" cy="49.1" r="4" /><circle cx="242.0" cy="74.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="130.0" y="89" text-anchor="middle">13/05</text><text x="242.0" y="89" text-anchor="middle">19/05</text></svg><p>6.8 → 6.3 → 5.9</p></div>
+<div class="trend"><h3>Eritrócitos (milhões/µL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,18.0 L130.0,24.9 L242.0,74.0" /><circle cx="18.0" cy="18.0" r="4" /><circle cx="130.0" cy="24.9" r="4" /><circle cx="242.0" cy="74.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="130.0" y="89" text-anchor="middle">13/05</text><text x="242.0" y="89" text-anchor="middle">19/05</text></svg><p>4.54 → 4.4 → 3.4</p></div>
+<div class="trend"><h3>Plaquetas (/µL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,74.0 L242.0,18.0" /><circle cx="18.0" cy="74.0" r="4" /><circle cx="242.0" cy="18.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="242.0" y="89" text-anchor="middle">13/05</text></svg><p>66000 → 120000</p></div>
+<div class="trend"><h3>Leucócitos (/µL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,18.0 L242.0,74.0" /><circle cx="18.0" cy="18.0" r="4" /><circle cx="242.0" cy="74.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="242.0" y="89" text-anchor="middle">13/05</text></svg><p>41900 → 10520</p></div>
+<div class="trend"><h3>Creatinina (mg/dL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,18.0 L242.0,74.0" /><circle cx="18.0" cy="18.0" r="4" /><circle cx="242.0" cy="74.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="242.0" y="89" text-anchor="middle">13/05</text></svg><p>1.7 → 1.6</p></div>
+<div class="trend"><h3>Ureia (mg/dL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M18.0,74.0 L242.0,18.0" /><circle cx="18.0" cy="74.0" r="4" /><circle cx="242.0" cy="18.0" r="4" /><text x="18.0" y="89" text-anchor="middle">17/02</text><text x="242.0" y="89" text-anchor="middle">13/05</text></svg><p>36 → 80.5</p></div>
+<div class="trend"><h3>Bilirrubina total (mg/dL)</h3><svg viewBox="0 0 260 92" class="spark"><path d="M130.0,46.0" /><circle cx="130.0" cy="46.0" r="4" /><text x="130.0" y="89" text-anchor="middle">22/05</text></svg><p>1.16</p></div></div>
+  </div>
+</section>
+
+<section id="exames">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Exames traduzidos</span></div><div><h2>Resultados laboratoriais com interpretação contextual</h2><p>Cada tabela preserva o resultado original, o intervalo de referência informado pelo laboratório e uma explicação objetiva sobre o significado clínico provável. Quando a interpretação depende de outros dados, essa limitação é indicada.</p></div></div>
+    
+    <article class="exam-card" data-date="17/02/2026" data-type="Hemograma">
+      <div class="exam-head"><span>17/02/2026</span><h3>Hemograma</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Eritrócitos</strong></td><td>4,54 milhões/µL</td><td>5,0 a 10,0</td><td><span class="badge bad">Baixo</span></td><td>Menos glóbulos vermelhos que o esperado.</td></tr><tr><td><strong>Hemoglobina</strong></td><td>6,8 g/dL</td><td>8,0 a 15,0</td><td><span class="badge bad">Baixo</span></td><td>Capacidade de transporte de oxigênio reduzida.</td></tr><tr><td><strong>Hematócrito</strong></td><td>22%</td><td>24 a 45</td><td><span class="badge bad">Baixo</span></td><td>Confirma anemia.</td></tr><tr><td><strong>VCM</strong></td><td>49 µm³</td><td>39 a 55</td><td><span class="badge ok">Normal</span></td><td>Tamanho médio das hemácias preservado.</td></tr><tr><td><strong>CHCM</strong></td><td>30%</td><td>30 a 36</td><td><span class="badge watch">Limite inferior</span></td><td>Concentração de hemoglobina nas hemácias no limite.</td></tr><tr><td><strong>RDW</strong></td><td>25%</td><td>14 a 19</td><td><span class="badge warn">Alto</span></td><td>Variação no tamanho das hemácias, compatível com anemia em evolução ou resposta medular.</td></tr><tr><td><strong>Leucócitos totais</strong></td><td>41.900/mm³</td><td>5.500 a 19.500</td><td><span class="badge bad">Muito alto</span></td><td>Leucocitose importante.</td></tr><tr><td><strong>Segmentados/neutrófilos</strong></td><td>37.710/mm³</td><td>2.500 a 12.500</td><td><span class="badge bad">Muito alto</span></td><td>Padrão compatível com inflamação, infecção ou resposta de estresse importante.</td></tr><tr><td><strong>Monócitos</strong></td><td>2.514/mm³</td><td>0 a 850</td><td><span class="badge warn">Alto</span></td><td>Pode acompanhar inflamação mais prolongada.</td></tr><tr><td><strong>Linfócitos</strong></td><td>838/mm³</td><td>1.500 a 7.000</td><td><span class="badge bad">Baixo</span></td><td>Pode ocorrer em resposta de estresse ou processo inflamatório sistêmico.</td></tr><tr><td><strong>Plaquetas</strong></td><td>66.000/mm³</td><td>230.000 a 680.000</td><td><span class="badge bad">Baixo</span></td><td>Trombocitopenia importante, com ressalva de agregação plaquetária em gatos.</td></tr><tr><td><strong>Hematozoários</strong></td><td>Ausentes</td><td>Ausentes</td><td><span class="badge watch">Negativo em lâmina</span></td><td>Não exclui infecção por hemoparasitas, conforme observação do laboratório.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="17/02/2026" data-type="Bioquímica sérica">
+      <div class="exam-head"><span>17/02/2026</span><h3>Bioquímica sérica</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>AST/TGO</strong></td><td>121 U/L</td><td>0 a 43</td><td><span class="badge warn">Alto</span></td><td>Enzima menos específica, pode subir por fígado, músculo ou inflamação sistêmica.</td></tr><tr><td><strong>Fosfatase alcalina/ALP</strong></td><td>2,74 U/L</td><td>0 a 93</td><td><span class="badge ok">Normal</span></td><td>Não aponta colestase por este marcador naquele momento.</td></tr><tr><td><strong>Creatinina</strong></td><td>1,7 mg/dL</td><td>&lt;1,6</td><td><span class="badge warn">Levemente alto</span></td><td>Sugere acompanhar rim/hidratação, principalmente se persistente.</td></tr><tr><td><strong>Ureia</strong></td><td>36 mg/dL</td><td>43 a 64</td><td><span class="badge bad">Baixo</span></td><td>Isoladamente tem pouco peso clínico, depende de dieta, fígado, hidratação e contexto.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="13/05/2026" data-type="Hemograma">
+      <div class="exam-head"><span>13/05/2026</span><h3>Hemograma</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Eritrócitos</strong></td><td>4,4 milhões/µL</td><td>5,0 a 10,0</td><td><span class="badge bad">Baixo</span></td><td>Anemia persistente.</td></tr><tr><td><strong>Hematócrito</strong></td><td>22%</td><td>24 a 45</td><td><span class="badge bad">Baixo</span></td><td>Anemia ainda presente.</td></tr><tr><td><strong>Hemoglobina</strong></td><td>6,3 g/dL</td><td>8,0 a 15,0</td><td><span class="badge bad">Baixo</span></td><td>Pior que fevereiro.</td></tr><tr><td><strong>VGM</strong></td><td>50 µm³</td><td>39 a 55</td><td><span class="badge ok">Normal</span></td><td>Hemácias de tamanho médio preservado.</td></tr><tr><td><strong>CHGM</strong></td><td>29%</td><td>30 a 36</td><td><span class="badge watch">Levemente baixo</span></td><td>Leve hipocromia, ou seja, menor concentração de hemoglobina na célula.</td></tr><tr><td><strong>Anisocitose</strong></td><td>Acentuada</td><td>Não informado</td><td><span class="badge warn">Alterado</span></td><td>Grande variação de tamanho das hemácias.</td></tr><tr><td><strong>Policromatófilos</strong></td><td>3 a 4/campo</td><td>Não informado</td><td><span class="badge watch">Presente</span></td><td>Sinal indireto de resposta medular, células jovens no sangue.</td></tr><tr><td><strong>Metarrubrícitos</strong></td><td>784/100 leucócitos</td><td>Não informado</td><td><span class="badge watch">Presente</span></td><td>Precursores de hemácias na circulação, podem aparecer em regeneração ou estresse medular.</td></tr><tr><td><strong>Plasma</strong></td><td>Levemente ictérico</td><td>Ausente</td><td><span class="badge warn">Alterado</span></td><td>Amarelamento da amostra, sugere bilirrubina elevada.</td></tr><tr><td><strong>Leucócitos totais</strong></td><td>10.520/µL</td><td>5.500 a 19.500</td><td><span class="badge ok">Normal</span></td><td>Leucocitose de fevereiro não aparece neste exame.</td></tr><tr><td><strong>Plaquetas estimadas</strong></td><td>120.000/µL</td><td>230.000 a 680.000</td><td><span class="badge bad">Baixo</span></td><td>Melhor que fevereiro, mas ainda abaixo da referência.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="13/05/2026" data-type="Bioquímica">
+      <div class="exam-head"><span>13/05/2026</span><h3>Bioquímica</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Ureia</strong></td><td>80,5 mg/dL</td><td>42,8 a 64,2</td><td><span class="badge warn">Alto</span></td><td>Pode refletir desidratação, rim, maior catabolismo proteico ou outras causas.</td></tr><tr><td><strong>Creatinina</strong></td><td>1,6 mg/dL</td><td>0,8 a 1,8</td><td><span class="badge watch">Alto normal</span></td><td>Limite superior do laboratório. Pela régua IRIS, pede acompanhamento se persistente e estável.</td></tr><tr><td><strong>ALT</strong></td><td>6,8 U/L</td><td>6,0 a 83,0</td><td><span class="badge ok">Normal baixo</span></td><td>Não indica lesão hepatocelular ativa importante por este marcador, mas não descarta doença biliar/crônica.</td></tr><tr><td><strong>GGT</strong></td><td>173,9 U/L</td><td>0 a 10,0</td><td><span class="badge bad">Muito alto</span></td><td>Marcador muito forte de alteração hepatobiliar/colestática no contexto.</td></tr><tr><td><strong>Soro</strong></td><td>Moderadamente ictérico</td><td>Ausente</td><td><span class="badge warn">Alterado</span></td><td>Amostra amarelada reforça hiperbilirrubinemia/icterícia.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="15/05/2026" data-type="Ultrassom abdominal">
+      <div class="exam-head"><span>15/05/2026</span><h3>Ultrassom abdominal</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Vesícula urinária</strong></td><td>Parede 0,21 cm, discretamente espessada; discreta celularidade</td><td>Sem valor de referência no laudo</td><td><span class="badge watch">Alterado leve</span></td><td>Imagens sugestivas de cistite discreta.</td></tr><tr><td><strong>Fígado</strong></td><td>Dimensões aumentadas, superfície rugosa, ecotextura homogênea</td><td>Sem valor de referência no laudo</td><td><span class="badge warn">Alterado</span></td><td>Hepatomegalia e hepatopatia no parecer.</td></tr><tr><td><strong>Vias biliares</strong></td><td>Sem evidências de alteração intra ou extra-hepática</td><td>Sem alteração</td><td><span class="badge ok">Sem obstrução visível</span></td><td>Não afasta inflamação hepatobiliar microscópica/funcional.</td></tr><tr><td><strong>Alças intestinais</strong></td><td>Segmentos com parede espessada e conteúdo misto</td><td>Sem valor de referência no laudo</td><td><span class="badge warn">Alterado</span></td><td>Compatível com gastroenterite/enteropatia no contexto.</td></tr><tr><td><strong>Estômago</strong></td><td>Parede 0,34 cm, mucosa irregular, conteúdo gasoso</td><td>Sem valor de referência no laudo</td><td><span class="badge warn">Alterado</span></td><td>Pode acompanhar gastrite/gastroenterite.</td></tr><tr><td><strong>Baço</strong></td><td>Dimensões aumentadas, ecotextura homogênea</td><td>Sem valor de referência no laudo</td><td><span class="badge warn">Alterado</span></td><td>Esplenomegalia, pode acompanhar inflamação, anemia, resposta imunológica, entre outras causas.</td></tr><tr><td><strong>Rins</strong></td><td>Rim E 3,46 cm, rim D 3,66 cm, relação córtico-medular preservada</td><td>Sem valor de referência no laudo</td><td><span class="badge watch">Atenção</span></td><td>Parecer final cita nefropatia bilateral, embora a descrição preserve estrutura. Precisa correlacionar com urina, SDMA, creatinina e pressão.</td></tr><tr><td><strong>Pâncreas</strong></td><td>Sem alterações sonográficas dignas de nota</td><td>Sem alteração</td><td><span class="badge ok">Não alterado no US</span></td><td>Pancreatite crônica ainda pode não aparecer claramente no ultrassom, segundo a veterinária.</td></tr><tr><td><strong>Adrenais</strong></td><td>Dimensões preservadas</td><td>Sem alteração</td><td><span class="badge ok">Sem alteração</span></td><td>Sem achados relevantes no laudo.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="19/05/2026" data-type="Reticulócitos, AST e albumina">
+      <div class="exam-head"><span>19/05/2026</span><h3>Reticulócitos, AST e albumina</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Hemácias</strong></td><td>3,4 milhões/µL</td><td>5 a 10</td><td><span class="badge bad">Baixo</span></td><td>Anemia pior em relação a 13/05.</td></tr><tr><td><strong>Hematócrito</strong></td><td>20%</td><td>24 a 45</td><td><span class="badge bad">Baixo</span></td><td>Piora discreta da anemia.</td></tr><tr><td><strong>Hemoglobina</strong></td><td>5,9 g/dL</td><td>8 a 15</td><td><span class="badge bad">Baixo</span></td><td>Piora da capacidade de transporte de oxigênio.</td></tr><tr><td><strong>Reticulócitos absolutos totais</strong></td><td>105.400/µL</td><td>60.000 a 150.000 = leve</td><td><span class="badge watch">Resposta leve</span></td><td>Indica tentativa de resposta da medula, conforme régua do laboratório.</td></tr><tr><td><strong>Reticulócitos agregados</strong></td><td>44.200/µL</td><td>Corte externo: &gt;50.000 em gatos sugere regeneração</td><td><span class="badge watch">Limítrofe</span></td><td>Em gatos, agregados refletem resposta mais recente. Está perto do corte, mas abaixo dele.</td></tr><tr><td><strong>Reticulócitos corrigidos</strong></td><td>1,68%</td><td>&lt;1 arregen.; &gt;1 regen.</td><td><span class="badge watch">Regenerativo pelo laudo</span></td><td>A veterinária interpretou como padrão regenerativo leve.</td></tr><tr><td><strong>Plasma</strong></td><td>Moderadamente ictérico</td><td>Ausente</td><td><span class="badge warn">Alterado</span></td><td>Icterícia persistente.</td></tr><tr><td><strong>AST</strong></td><td>20,9 U/L</td><td>26 a 43</td><td><span class="badge bad">Baixo</span></td><td>Não reforça lesão hepatocelular naquele momento.</td></tr><tr><td><strong>Albumina</strong></td><td>3,4 g/dL</td><td>2,1 a 3,3</td><td><span class="badge warn">Levemente alto</span></td><td>Pode variar com hidratação/concentração da amostra; não sugere perda proteica nesse resultado.</td></tr></tbody></table></div>
+    </article>
+
+    <article class="exam-card" data-date="22/05/2026" data-type="Bilirrubina e FeLV">
+      <div class="exam-head"><span>22/05/2026</span><h3>Bilirrubina e FeLV</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>Marcador</th><th>Resultado</th><th>Referência</th><th>Leitura</th><th>Tradução para leigos</th></tr></thead><tbody><tr><td><strong>Bilirrubina total</strong></td><td>1,16 mg/dL</td><td>0,1 a 0,7</td><td><span class="badge warn">Alto</span></td><td>Confirma hiperbilirrubinemia.</td></tr><tr><td><strong>Bilirrubina direta</strong></td><td>0,53 mg/dL</td><td>0,1 a 0,3</td><td><span class="badge warn">Alto</span></td><td>Fração conjugada, reforça eixo hepatobiliar/colestático no contexto.</td></tr><tr><td><strong>Bilirrubina indireta</strong></td><td>0,63 mg/dL</td><td>0,0 a 0,5</td><td><span class="badge warn">Alto</span></td><td>Pode aparecer com destruição de hemácias ou processamento hepático insuficiente.</td></tr><tr><td><strong>Soro</strong></td><td>Ictérico +</td><td>Ausente</td><td><span class="badge warn">Alterado</span></td><td>A amostra manteve aspecto amarelado.</td></tr><tr><td><strong>FeLV DNA proviral PCR</strong></td><td>Não detectado</td><td>Não detectado</td><td><span class="badge ok">Negativo</span></td><td>Reduz muito a suspeita de FeLV proviral na amostra, mas o próprio laudo orienta correlacionar com clínica e outros testes se a suspeita persistir.</td></tr></tbody></table></div>
+    </article>
+  </div>
+</section>
+
+<section id="condutas">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Receitas e condutas</span></div><div><h2>Prescrições registradas e observações de uso</h2><p>Esta seção documenta as prescrições e orientações recebidas. Qualquer ajuste de dose, suspensão ou substituição deve ser definido exclusivamente por profissional veterinário responsável pelo caso.</p></div></div>
+    <div class="therapy-grid">
+      <div class="med"><small>14/05/2026</small><h3>Vonau Vet, Avert</h3><p>Receita: 0,8 mL por via oral a cada 12 horas durante 5 dias. Finalidade provável: controle de náusea e vômito. Atualização do tutor: a Sofia vomitou logo após a administração, portanto a absorção da dose é incerta e não se deve interpretar esse evento como falha terapêutica conclusiva do antiemético.</p></div>
+      <div class="med"><small>14/05/2026</small><h3>Foli B, Avert</h3><p>Receita: 0,4 mL por via oral a cada 24 horas durante 30 dias. Suplemento de vitaminas do complexo B, com possível papel de suporte nutricional em pacientes com baixa ingestão, alterações gastrointestinais/hepáticas ou acompanhamento hematológico.</p></div>
+      <div class="med"><small>14/05/2026</small><h3>Hepvet suspensão</h3><p>Receita: 0,8 mL por via oral a cada 24 horas durante 30 dias. Suplemento de suporte ao metabolismo hepático. Atualização do tutor: quando usado junto ao Hemolipet, os episódios de vômito ocorreram repetidamente após as administrações. Deve ser registrado como baixa tolerância oral/suspeita de intolerância, a ser reavaliada antes de nova tentativa.</p></div>
+      <div class="med"><small>23/05/2026</small><h3>Doxiciclina 50 mg, Vetnil</h3><p>Receita: 1 comprimido por via oral a cada 24 horas durante 21 dias. Orientação veterinária registrada: não moer o comprimido, administrar com alimento e oferecer água, sachê ou comida imediatamente após, para reduzir risco de irritação esofágica. Atualização do tutor: a administração inicial com Recovery antes/depois foi pouco tolerada; a divisão do comprimido e administração com água ou água de sachê foi associada a menor frequência de vômitos. Esse ajuste deve ser validado por profissional.</p></div>
+    </div>
+    <div class="panel" style="margin-top:18px"><h3>Revisão de dose à luz do peso atualizado</h3><p>Com o peso confiável de 2,75 kg, algumas prescrições previamente calculadas com base no registro de 3,9 kg merecem conferência veterinária antes de qualquer continuidade ou repetição. A doxiciclina 50 mg corresponde aproximadamente a 18,2 mg/kg/dia no peso atual; em literatura para Mycoplasma haemofelis, há protocolo descrito com doxiciclina em torno de 10 mg/kg/dia por até 28 dias, com monitoramento por PCR. O Hepvet 0,8 mL/dia corresponde aproximadamente a 0,29 mL/kg/dia; o fabricante informa modo de usar de 0,2 mL/kg/dia. O Vonau Vet 0,8 mL, considerando 5 mg/mL, corresponde a 4 mg por dose, cerca de 1,45 mg/kg por dose no peso atual; o próprio produto é indicado em bula para cães, embora a ondansetrona possa ser usada em gatos por decisão veterinária. Esta comparação não é orientação para alterar tratamento, mas um ponto objetivo para revisão com a veterinária responsável.</p></div>
+    <div class="panel" style="margin-top:18px"><h3>Tolerância oral e controle de vômitos</h3><p>O histórico recente mostra que a principal limitação prática do tratamento tem sido a baixa tolerância à administração oral. Vômitos repetidos reduzem a confiabilidade da absorção de medicações, aumentam risco de desidratação e dificultam recuperação nutricional. Para segunda opinião, o ponto central é definir se o manejo ainda pode ser seguro em casa ou se há indicação de suporte presencial com hidratação, antiemético por via alternativa, controle de dor/náusea, eletrólitos e plano alimentar assistido.</p></div>
+    <div class="panel" style="margin-top:18px"><h3>Alimentação e suporte calórico</h3><p>A veterinária sugeriu opções para aumento de ingestão calórica: Recovery Royal Canin, Hill's a/d, Churu, Fancy Feast Patê e Sheba. Atualização do tutor: a Sofia continua bebendo água e comendo pequenas porções ao longo do dia, porém a quantidade percebida se mantém semelhante desde o início do tratamento e não impediu perda muscular importante. O tutor adquiriu Royal Canin para gatos com sensibilidade digestiva e Golden Senior para gatos idosos; a Royal Canin não foi aceita, possivelmente por tamanho ou textura do grão, enquanto a Golden Senior é ingerida em pequenas quantidades. Com 2,75 kg, a necessidade energética de repouso estimada é de aproximadamente 149 kcal/dia; a ingestão real deve ser quantificada em kcal/dia, não apenas descrita como “beliscando”.</p></div>
+  </div>
+</section>
+
+<section id="glossario">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Glossário clínico</span></div><div><h2>Glossário de termos clínicos</h2><p>Selecione cada termo para consultar uma explicação breve e acessível.</p></div></div>
+    <div class="glossary"><details><summary>Anemia</summary><p>Quando há menos glóbulos vermelhos/hemoglobina do que o necessário. Em gatos pode vir de perda de sangue, destruição de hemácias, doença crônica, rim, infecções, toxinas ou medula óssea.</p></details>
+<details><summary>Hematócrito</summary><p>Percentual do sangue ocupado por hemácias. Baixo confirma anemia. Sofia ficou em 22%, depois 20%.</p></details>
+<details><summary>Hemoglobina</summary><p>Proteína que carrega oxigênio. Baixa explica fraqueza, cansaço, mucosas pálidas e pior tolerância a esforço.</p></details>
+<details><summary>VCM/VGM</summary><p>Tamanho médio das hemácias. Normal sugere anemia normocítica, comum em doença crônica/inflamatória ou fases iniciais.</p></details>
+<details><summary>CHCM/CHGM</summary><p>Concentração de hemoglobina dentro das hemácias. Baixo pode sugerir células mais pobres em hemoglobina.</p></details>
+<details><summary>RDW e anisocitose</summary><p>Medem variação no tamanho das hemácias. Alto/acentuado mostra sangue mais heterogêneo, comum quando há resposta medular ou anemia em evolução.</p></details>
+<details><summary>Policromatófilos</summary><p>Hemácias jovens com coloração diferente. São uma pista visual de regeneração.</p></details>
+<details><summary>Metarrubrícitos</summary><p>Precursores de hemácias que ainda não deveriam estar em grande quantidade no sangue periférico. Podem aparecer em resposta intensa da medula, hipóxia, inflamação ou estresse medular.</p></details>
+<details><summary>Reticulócitos</summary><p>Hemácias jovens. Em gatos, os agregados são mais úteis para resposta recente. O laudo chama de regenerativa leve, mas o número agregado está limítrofe.</p></details>
+<details><summary>Leucocitose</summary><p>Aumento de glóbulos brancos. Pode indicar inflamação, infecção, estresse ou uso de corticoide, conforme padrão.</p></details>
+<details><summary>Neutrofilia</summary><p>Aumento de neutrófilos, frequentemente ligado a inflamação, infecção ou resposta de estresse.</p></details>
+<details><summary>Monocitose</summary><p>Aumento de monócitos. Pode acompanhar inflamação mais prolongada, necrose tecidual ou resposta imune.</p></details>
+<details><summary>Trombocitopenia</summary><p>Plaquetas baixas. Pode ser real ou por agregação no tubo, algo comum em gatos. Repetição baixa merece acompanhamento.</p></details>
+<details><summary>Ureia</summary><p>Marcador influenciado por rim, hidratação, dieta, catabolismo proteico, sangramento digestivo e fígado. Deve ser lido junto com creatinina e urina.</p></details>
+<details><summary>Creatinina</summary><p>Marcador renal influenciado por massa muscular e hidratação. Em gatos, valores perto de 1,6 a 1,8 pedem leitura com SDMA, urina e pressão.</p></details>
+<details><summary>ALT</summary><p>Enzima mais ligada a lesão de células hepáticas. Normal não exclui doença biliar ou crônica.</p></details>
+<details><summary>AST</summary><p>Enzima menos específica, pode vir de fígado ou músculo. Subiu em fevereiro e normalizou/baixou depois.</p></details>
+<details><summary>GGT</summary><p>Enzima associada a vias biliares/colestase. O valor de 173,9 é um dos achados mais fortes do dossiê.</p></details>
+<details><summary>Bilirrubina direta</summary><p>Fração já processada pelo fígado. Alta costuma apontar para dificuldade de fluxo/processamento hepatobiliar no contexto.</p></details>
+<details><summary>Bilirrubina indireta</summary><p>Fração antes do processamento hepático. Alta pode aparecer em destruição de hemácias ou sobrecarga do fígado.</p></details>
+<details><summary>Icterícia</summary><p>Amarelamento de soro, mucosas ou pele por excesso de bilirrubina. Nos exames aparece como plasma/soro ictérico.</p></details>
+<details><summary>Hepatomegalia</summary><p>Fígado aumentado. No caso, veio junto de superfície rugosa, GGT alta e bilirrubina alta.</p></details>
+<details><summary>Colangite/colangiohepatite</summary><p>Inflamação de vias biliares e fígado. É uma suspeita coerente com o eixo hepatobiliar, mas não está fechada por biópsia/cultura.</p></details>
+<details><summary>Tríade felina</summary><p>Conjunto envolvendo intestino, fígado/vias biliares e pâncreas. O pâncreas pode parecer normal no ultrassom mesmo em quadros crônicos.</p></details>
+<details><summary>Cistite</summary><p>Inflamação da bexiga. O ultrassom sugere forma discreta, mas urinálise é essencial para confirmar relevância.</p></details>
+<details><summary>Nefropatia</summary><p>Termo amplo para alteração renal. No laudo aparece no parecer, mas precisa de exames de urina, SDMA, pressão e repetição de creatinina.</p></details>
+<details><summary>FeLV PCR proviral</summary><p>Procura DNA do vírus da leucemia felina integrado. Não detectado reduz a suspeita na amostra, mas não substitui todo raciocínio clínico.</p></details>
+<details><summary>Hemoplasma felino</summary><p>Bactéria que pode aderir às hemácias e causar anemia. Lâmina negativa não exclui. PCR específico seria mais direto se a suspeita seguir.</p></details>
+<details><summary>Doxiciclina</summary><p>Antibiótico usado em suspeitas como hemoplasma. Em gatos deve ser administrada com alimento e oferta de água ou alimento úmido após a dose, pois comprimidos retidos no esôfago podem causar irritação.</p></details></div>
+  </div>
+</section>
+
+
+<section id="discussao">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Discussão veterinária</span></div><div><h2>Pontos para segunda opinião veterinária</h2><p>Esta seção cruza os achados da Sofia com referências veterinárias gerais. Não substitui consulta nem propõe automedicação. A finalidade é organizar perguntas qualificadas para avaliação por outro profissional.</p></div></div>
+    <div class="diagnosis-grid">
+      <article class="callout"><h3>1. Prioridade hepatobiliar</h3><p>GGT muito elevada, bilirrubinas aumentadas, icterícia laboratorial e hepatomegalia sugerem que o eixo fígado/vias biliares deve permanecer como prioridade. Para discussão: repetir perfil hepático completo, avaliar ácidos biliares quando indicado, verificar coagulação antes de procedimentos invasivos e discutir se há indicação de investigação mais específica para colangite/colangiohepatite, incluindo citologia, cultura de bile ou biópsia quando o risco for aceitável. Ursodeoxicólico, vitamina K, antibióticos ou prednisolona podem aparecer em protocolos de colangite, mas dependem do tipo suspeito, da presença ou ausência de obstrução biliar e da avaliação clínica.</p></article>
+      <article class="callout"><h3>3. Nutrição como intervenção clínica</h3><p>Em gatos, baixa ingestão prolongada pode agravar ou precipitar lipidose hepática, especialmente quando já há doença de base. Para discussão: plano alimentar com meta calórica baseada no peso atual de 2,75 kg, monitoramento de peso em intervalos curtos, controle de náusea/dor/estresse e definição objetiva de quando usar estimulante de apetite ou alimentação assistida. A aceitação parcial da Golden Senior é relevante, mas deve ser convertida em ingestão calórica diária; a recusa da Royal Canin para sensibilidade digestiva indica que tamanho, textura e palatabilidade precisam entrar no plano. Diretrizes de manejo de gatos inapetentes enfatizam que tubos de alimentação não devem ser atrasados quando a ingestão voluntária é insuficiente.</p></article>
+      <article class="callout"><h3>4. Anemia e hemoplasma</h3><p>A anemia persistente com sinais de regeneração discreta exige acompanhar tendência, não apenas um exame isolado. Para discussão: hemograma seriado após o ciclo de doxiciclina, reticulócitos agregados, pesquisa de hemoplasma por PCR se a suspeita continuar, teste FIV, revisão de FeLV conforme protocolo da clínica e investigação de causas inflamatórias, infecciosas, imunomediadas, gastrointestinais ou renais. Se houver fraqueza intensa, mucosas muito pálidas, taquipneia ou queda adicional importante do hematócrito, a urgência muda de patamar.</p></article>
+      <article class="callout"><h3>5. Rim, bexiga e segurança medicamentosa</h3><p>Creatinina limítrofe, ureia elevada em maio, parecer ultrassonográfico de nefropatia bilateral e cistite discreta não fecham diagnóstico renal, mas justificam complementação. Para discussão: urinálise completa, densidade urinária, cultura se houver suspeita infecciosa, UPC, pressão arterial, SDMA e fósforo. Como o peso confiável foi atualizado para 2,75 kg, também é importante revisar qualquer medicação em mg/kg ou mL/kg, principalmente fármacos de uso contínuo, antibióticos e antieméticos.</p></article>
+    </div>
+    <article class="panel" style="margin-top:18px"><h3>Questões objetivas para enviar ao veterinário</h3><ol><li>Diante de vômitos repetidos por vários dias, perda muscular e peso atual de 2,75 kg, há indicação de atendimento emergencial, internação ou fluidoterapia para estabilização?</li><li>É possível substituir temporariamente medicações por via oral por alternativas injetáveis, transdérmicas ou hospitalares para controlar náusea/vômitos e garantir absorção?</li><li>Com o peso atual de 2,75 kg, as doses de doxiciclina, Hepvet, Foli B e eventual antiemético permanecem adequadas?</li><li>A doxiciclina continua sendo a melhor escolha, dose e apresentação para este caso, considerando vômitos, risco esofágico e suspeita clínica original?</li><li>Qual meta calórica mínima diária deve ser atingida em kcal/dia, e em qual ponto alimentação assistida ou sonda passa a ser indicada?</li><li>Considerando que a Golden Senior é aceita em pequenas porções e a Royal Canin para sensibilidade digestiva foi recusada, qual alimento, textura, tamanho de partícula ou apresentação úmida/seca é mais indicada para manter ingestão suficiente neste momento?</li><li>O conjunto GGT muito elevada + bilirrubinas altas + hepatomegalia justifica investigação específica para colangite/colangiohepatite, tríade felina ou pancreatite associada?</li><li>Há necessidade de repetir hemograma, eletrólitos, ureia/creatinina, ALT/AST/ALP/GGT, bilirrubinas, fósforo, glicose e urinálise diante da piora clínica relatada?</li><li>A anemia deve ser tratada como regenerativa, discretamente regenerativa ou mista? Qual parâmetro será usado como referência de melhora?</li><li>Faz sentido solicitar PCR para hemoplasma, FIV e hemograma de controle após a doxiciclina?</li><li>O parecer de nefropatia/cistite no ultrassom muda a conduta atual ou exige urinálise, cultura, SDMA, UPC e pressão arterial?</li></ol></article>
+    <article class="panel" style="margin-top:18px"><h3>Alertas práticos para comunicação imediata</h3><p>Buscar orientação veterinária imediata se houver vômitos repetidos, incapacidade de manter medicações/alimento, recusa alimentar, salivação intensa ou dificuldade de engolir após comprimidos, mucosas muito pálidas ou mais amareladas, fraqueza importante, respiração alterada, sangue nas fezes ou urina, dor ao urinar, colapso, desidratação aparente ou piora rápida do estado geral. Pelo histórico atualizado, a combinação de vômitos persistentes, perda muscular, peso atual de 2,75 kg e ingestão voluntária incerta já justifica segunda opinião presencial sem demora.</p></article>
+  </div>
+</section>
+
+<section id="fontes">
+  <div class="wrap">
+    <div class="section-head"><div><span class="kicker">Arquivos e fontes</span></div><div><h2>Documentos originais e referências técnicas</h2><p>Os cards permitem acesso aos PDFs e imagens originais utilizados na organização do dossiê. As referências listadas abaixo embasam explicações gerais de nomenclatura, limites de interpretação e pontos de discussão clínica.</p></div></div>
+    <div class="source-grid"><a class="source-card" href="assets/originais/hemograma_2026-02-17.pdf" target="_blank"><img src="assets/previews/prev_hemograma_2026-02-17_p1.png" alt="Prévia de Hemograma 17/02/2026"><span>Hemograma 17/02/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/bioquimica_2026-02-17.pdf" target="_blank"><img src="assets/previews/prev_bioquimica_2026-02-17.png" alt="Prévia de Bioquímica 17/02/2026"><span>Bioquímica 17/02/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/hemograma_bioquimica_2026-05-13.pdf" target="_blank"><img src="assets/previews/prev_hemograma_2026-05-13_p1.png" alt="Prévia de Hemograma e bioquímica 13/05/2026"><span>Hemograma e bioquímica 13/05/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/ultrassom_abdominal_2026-05-15.pdf" target="_blank"><img src="assets/previews/prev_us_2026-05-15_p1.png" alt="Prévia de Ultrassom abdominal 15/05/2026"><span>Ultrassom abdominal 15/05/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/reticulocitos_ast_albumina_2026-05-19.pdf" target="_blank"><img src="assets/previews/prev_reticulocitos_2026-05-19_p1.png" alt="Prévia de Reticulócitos, AST e albumina 19/05/2026"><span>Reticulócitos, AST e albumina 19/05/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/bilirrubina_felv_pcr_2026-05-22.pdf" target="_blank"><img src="assets/previews/prev_bilirrubina_2026-05-22_p1.png" alt="Prévia de Bilirrubina e FeLV 22/05/2026"><span>Bilirrubina e FeLV 22/05/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/receita_suporte_2026-05-14.pdf" target="_blank"><img src="assets/previews/prev_receita_suporte.jpg" alt="Prévia de Receita de suporte 14/05/2026"><span>Receita de suporte 14/05/2026</span><em>Abrir original</em></a>
+<a class="source-card" href="assets/originais/receita_doxiciclina_2026-05-23.pdf" target="_blank"><img src="assets/previews/prev_receita_doxiciclina.jpg" alt="Prévia de Receita doxiciclina 23/05/2026"><span>Receita doxiciclina 23/05/2026</span><em>Abrir original</em></a></div>
+    <article class="panel" style="margin-top:24px"><h3>Referências técnicas externas</h3><ul class="refs"><li><strong>Merck Veterinary Manual.</strong> <a href="https://www.merckvetmanual.com/cat-owners/blood-disorders-of-cats/anemia-in-cats" target="_blank" rel="noreferrer">Anemia em gatos: tipos, causas e sinais</a></li>
+<li><strong>Merck Veterinary Manual.</strong> <a href="https://www.merckvetmanual.com/circulatory-system/anemia/overview-of-anemia-in-animals" target="_blank" rel="noreferrer">Critérios de regeneração por reticulócitos</a></li>
+<li><strong>Merck Veterinary Manual.</strong> <a href="https://www.merckvetmanual.com/digestive-system/hepatic-diseases-of-small-animals/feline-cholangitis-cholangiohepatitis-syndrome" target="_blank" rel="noreferrer">Colangite/colangiohepatite felina</a></li>
+<li><strong>Merck Veterinary Manual.</strong> <a href="https://www.merckvetmanual.com/circulatory-system/leukocyte-disorders/leukogram-abnormalities-in-animals" target="_blank" rel="noreferrer">Alterações de leucograma, neutrofilia e inflamação</a></li>
+<li><strong>IRIS Kidney.</strong> <a href="https://www.iris-kidney.com/iris-guidelines-1" target="_blank" rel="noreferrer">Estadiamento de doença renal crônica em cães e gatos</a></li>
+<li><strong>Cornell Feline Health Center.</strong> <a href="https://www.vet.cornell.edu/departments/cornell-feline-health-center/health-information/feline-health-topics/feline-leukemia-virus" target="_blank" rel="noreferrer">FeLV e interpretação geral de testes</a></li>
+<li><strong>PubMed.</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/15686972/" target="_blank" rel="noreferrer">Doxiciclina e risco esofágico em gatos</a></li>
+<li><strong>ASPCA.</strong> <a href="https://www.aspca.org/news/minoxidil-and-pets-what-you-need-know" target="_blank" rel="noreferrer">Minoxidil e toxicidade em pets</a></li><li><strong>ABCD Cats & Vets.</strong> <a href="https://www.abcdcatsvets.org/guideline-for-haemoplasmosis-in-cats/" target="_blank" rel="noreferrer">Guideline for haemoplasmosis in cats</a></li>
+<li><strong>PubMed.</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/29615243/" target="_blank" rel="noreferrer">Doxycycline protocol and PCR monitoring for Mycoplasma haemofelis</a></li>
+<li><strong>Avert.</strong> <a href="https://avertsaudeanimal.com.br/linhas/gastrointestinal/vonau-vet" target="_blank" rel="noreferrer">Vonau Vet: indicação e posologia do fabricante</a></li>
+<li><strong>Avert.</strong> <a href="https://avertsaudeanimal.com.br/linhas/cuidados-especiais/foli-b" target="_blank" rel="noreferrer">Foli B: indicação, modo de usar e composição</a></li>
+<li><strong>Vetnil.</strong> <a href="https://vetnil.com.br/produto/hepvet-r-suspensao/" target="_blank" rel="noreferrer">Hepvet Suspensão: indicação, modo de usar e componentes</a></li>
+<li><strong>ISFM / Journal of Feline Medicine and Surgery.</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/35775307/" target="_blank" rel="noreferrer">Consensus guidelines on management of the inappetent hospitalised cat</a></li>
+<li><strong>Merck Veterinary Manual.</strong> <a href="https://www.merckvetmanual.com/cat-owners/digestive-disorders-of-cats/vomiting-in-cats" target="_blank" rel="noreferrer">Vômitos em gatos: gravidade, desidratação e possível internação</a></li>
+<li><strong>VCA Hospitals.</strong> <a href="https://vcahospitals.com/know-your-pet/vomiting-in-cats" target="_blank" rel="noreferrer">Vômitos em gatos: fluidoterapia, eletrólitos e antieméticos injetáveis quando necessário</a></li>
+<li><strong>VCA Hospitals.</strong> <a href="https://vcahospitals.com/know-your-pet/doxycycline" target="_blank" rel="noreferrer">Doxiciclina: administração com água/alimento e efeitos gastrointestinais</a></li>
+<li><strong>WSAVA.</strong> <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">Diretrizes globais de avaliação nutricional</a></li></ul></article>
+    <article class="panel" style="margin-top:18px"><h3>Escopo e limitações deste dossiê</h3><p>Este material não substitui consulta, exame físico ou decisão veterinária. O conteúdo organiza documentos enviados, correlaciona tendências e explica nomenclaturas. Lacunas foram registradas como pendências, e hipóteses foram apresentadas apenas como possibilidades de investigação.</p></article>
+  </div>
+</section>
+</main>
+
+<div class="printbar"><button class="btn" onclick="window.print()">Imprimir / salvar PDF</button><a class="btn alt" href="dados_estruturados_sofia.json" download>Baixar dados</a></div>
+<footer><div class="wrap">Dossiê clínico-informativo da Sofia. Montado em 05/06/2026 a partir dos arquivos enviados pelo tutor, com atualização de peso, vômitos, tolerância medicamentosa, estado corporal e aceitação alimentar em 05/06/2026. Elaborado para apoiar leitura documental, discussão veterinária e acompanhamento longitudinal.</div></footer>
+</body>
+</html>

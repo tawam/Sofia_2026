@@ -1,0 +1,11 @@
+Dossiê Clínico Sofia
+
+Abra o arquivo index.html em qualquer navegador.
+
+Este material reúne, em formato organizado, exames laboratoriais, ultrassonografia, prescrições, comunicações veterinárias e atualizações clínicas relatadas pelo tutor.
+
+A pasta assets/originais contém os PDFs e imagens originais enviados.
+A pasta assets/previews contém imagens utilizadas como prévias visuais no dossiê.
+O arquivo dados_estruturados_sofia.json contém os dados clínicos organizados em formato estruturado.
+
+Este material tem finalidade documental e informativa. Não substitui consulta presencial, exame físico, interpretação laboratorial por médico-veterinário ou decisão terapêutica profissional.
